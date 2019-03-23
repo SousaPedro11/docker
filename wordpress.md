@@ -7,11 +7,11 @@ docker run \
 -p 3306:3306 \
 --net net-backend \
 -v mysql_config/:/etc/mysql/conf.d \
--v /etc/localtime:/etc/localtime:ro \
 -v mysql_data/:/var/lib/mysql \
+-v /etc/localtime:/etc/localtime:ro \
 -e MYSQL_ROOT_PASSWORD=pass \
--e MYSQL_USER=iec_desenv \
--e MYSQL_PASSWORD=iec_desenv \
+-e MYSQL_USER=pedro_db_user \
+-e MYSQL_PASSWORD=pp@12345# \
 -e MYSQL_ALLOW_EMPTY_PASSWORD=false \
 --restart=unless-stopped \
 -d \
@@ -28,8 +28,8 @@ docker run \
 -v /etc/localtime:/etc/localtime:ro \
 -v mysql_latest_data:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD=pass \
--e MYSQL_USER=iec_desenv \
--e MYSQL_PASSWORD=iec_desenv \
+-e MYSQL_USER=pedro_db_user \
+-e MYSQL_PASSWORD=pp@12345# \
 -e MYSQL_ALLOW_EMPTY_PASSWORD=false \
 --restart=unless-stopped \
 -d \
@@ -106,12 +106,13 @@ wordpress
 ## Banco MySQL
 ### Mysql 5.5
 ```sh
-docker run --name mysql_5.5 -p 3306:3306 --net net-backend -v /c/Users/pedrosousa/Documents/volumes/mysql/config/://etc/mysql/conf.d -v /etc/localtime://etc/localtime:ro -v /c/Users/pedrosousa/Documents/volumes/mysql/dat a/://var/lib/mysql -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_USER=iec_desenv -e MYSQL_PASSWORD=iec_desenv -e MYSQL_ALLOW_EMPTY_PASSWORD=false --restart=unless-stopped -d mysql:5.5
+docker run --name mysql_5.5 -p 3306:3306 --net net-backend -v /c/Users/pedrosousa/Documents/volumes/mysql/config/://etc/mysql/conf.d -v /etc/localtime://etc/localtime:ro -v /c/Users/pedrosousa/Documents/volumes/mysql/dat a/://var/lib/mysql -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_USER=pedro_db_user
+-e MYSQL_PASSWORD=pp@12345# -e MYSQL_ALLOW_EMPTY_PASSWORD=false --restart=unless-stopped -d mysql:5.5
 ```
 
 ### MySql latest (8.0.15)
 ```sh
-docker run --name mysql_latest -p 3307:3306 --net net-backend -v /c/Users/pedrosousa/Documents/volumes/mysql_latest/config/://etc/mysql/conf.d -v /etc/localtime://etc/localtime:ro -v /c/Users/pedrosousa/Documents/volumes /mysql_latest/data/://var/lib/mysql -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_USER=iec_desenv -e MYSQL_PASSWORD=iec_desenv -e MYSQL_ALLOW_EMPTY_PASSWORD=false --restart=unless-stopped -d mysql --default-authentication-plugin=mysql_native_password
+docker run --name mysql_latest -p 3307:3306 --net net-backend -v /c/Users/pedrosousa/Documents/volumes/mysql_latest/config/://etc/mysql/conf.d -v /etc/localtime://etc/localtime:ro -v /c/Users/pedrosousa/Documents/volumes /mysql_latest/data/://var/lib/mysql -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_USER=pedro_db_user -e MYSQL_PASSWORD=pp@12345# -e MYSQL_ALLOW_EMPTY_PASSWORD=false --restart=unless-stopped -d mysql --default-authentication-plugin=mysql_native_password
 ```
 
 ## phpMyAdmin
