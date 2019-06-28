@@ -3,7 +3,7 @@
 
 [Adminer](https://www.adminer.org/)
 
-## Volunme de dados
+## Volume de dados
 ```sh
 Não precisa
 ```
