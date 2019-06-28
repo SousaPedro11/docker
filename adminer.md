@@ -21,7 +21,7 @@ sudo docker network connect nome_da_rede nome_do_container
 
 ## Criação e execução do container
 ```sh
-docker run \
+sudo docker run \
 --name adminer \
 -p 8080:8080 \
 --restart=unless-stopped \
