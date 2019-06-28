@@ -14,7 +14,7 @@ sudo docker volume create --name pgadmin4_lib
 
 ## Rede
 
-Caso necessite, crie uma e conecte o adminer e o banco nela.
+Caso necessite, crie uma e conecte o pgadmin e o banco nela.
 Para criar:
 ```sh
 sudo docker network create -d bridge nome_da_rede
