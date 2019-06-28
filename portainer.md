@@ -20,7 +20,7 @@ Não precisa
 
 ### Linux
 ```sh
-docker run \
+sudo docker run \
 --name portainer \
 -p 9000:9000 \
 -v portainer_data:/data \
