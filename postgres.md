@@ -14,7 +14,7 @@ sudo docker volume create --name postgresql_9.3_data
 sudo docker volume create --name postgresql_9.4_data
 sudo docker volume create --name postgresql_9.5_data
 sudo docker volume create --name postgresql_9.6.6_data
-
+sudo docker volume create --name postgresql_data
 ```
 
 ## Rede
@@ -135,7 +135,7 @@ postgres:9.6.6-alpine
 docker run \
 --name pg_banco \
 -p 5432:5432 \
--v postgresql_9.6.6_data:/var/lib/postgresql/data \
+-v postgresql_data:/var/lib/postgresql/data \
 -e POSTGRES_USER=defina_usuario \
 -e POSTGRES_PASSWORD=defina_senha \
 -e POSTGRES_DB=postgres \
