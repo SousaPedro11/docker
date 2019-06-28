@@ -33,7 +33,7 @@ E também, caso precise, substitua o "-e PMA_ARBITRARY=1" por "-e PMA_HOST=nome_
 
 ### PhpMyadmin_4.6.6-1
 ```sh
-docker run \
+sudo docker run \
 --name phpmyadmin_4.6.6-1 \
 -p 3600:80 \
 -v phpmyadmin_sessions-4.6:/sessions \
@@ -45,7 +45,7 @@ phpmyadmin/phpmyadmin:4.6.6-1
 
 ### PhpMyadmin_4.7.0-1
 ```sh
-docker run \
+sudo docker run \
 --name phpmyadmin_4.7.0-1 \
 -p 3700:80 \
 -v phpmyadmin_sessions-4.7:/sessions \
@@ -57,7 +57,7 @@ phpmyadmin/phpmyadmin:4.7.0-1
 
 ### PhpMyadmin_4.8.5
 ```sh
-docker run \
+sudo docker run \
 --name phpmyadmin_4.8.5 \
 -p 3700:80 \
 -v phpmyadmin_sessions_4.8.5:/sessions \
@@ -69,7 +69,7 @@ phpmyadmin/phpmyadmin:4.8.5
 
 ### PhpMyAdmin integrado com banco_mysql
 ```sh
-docker run \
+sudo docker run \
 --name phpmyadmin_latest \
 -p 3800:80 \
 -p 9008:9000 \
