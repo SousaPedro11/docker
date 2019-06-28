@@ -7,6 +7,12 @@
 ## Volume de dados
 
 ```sh
+sudo docker volume create --name phpmyadmin_sessions-4.6
+
+sudo docker volume create --name phpmyadmin_sessions-4.7
+
+sudo docker volume create --name phpmyadmin_sessions_4.8.5
+
 sudo docker volume create --name phpmyadmin_sessions
 ```
 
@@ -26,11 +32,11 @@ E também, caso precise, substitua o "-e PMA_ARBITRARY=1" por "-e PMA_HOST=nome_
 ## Primeira execução
 
 ### PhpMyadmin_4.6.6-1
-```
+```sh
 docker run \
 --name phpmyadmin_4.6.6-1 \
 -p 3600:80 \
--v phpmyadmin_sessions:/sessions \
+-v phpmyadmin_sessions-4.6:/sessions \
 -e PMA_ARBITRARY=1 \
 --restart=unless-stopped \
 -d \
@@ -38,7 +44,7 @@ phpmyadmin/phpmyadmin:4.6.6-1
 ```
 
 ### PhpMyadmin_4.7.0-1
-```
+```sh
 docker run \
 --name phpmyadmin_4.7.0-1 \
 -p 3700:80 \
@@ -50,7 +56,7 @@ phpmyadmin/phpmyadmin:4.7.0-1
 ```
 
 ### PhpMyadmin_4.8.5
-```
+```sh
 docker run \
 --name phpmyadmin_4.8.5 \
 -p 3700:80 \
@@ -59,4 +65,18 @@ docker run \
 --restart=unless-stopped \
 -d \
 phpmyadmin/phpmyadmin:4.8.5
+```
+
+### phpMyAdmin integrado com banco_mysql
+```sh
+docker run \
+--name phpmyadmin_latest \
+-p 3800:80 \
+-p 9008:9000 \
+--net nome_da_rede_criada_do_mysql \
+-v phpmyadmin_sessions:/sessions \
+-e PMA_HOST=nome_container_mysql \
+--restart=unless-stopped \
+-d \
+phpmyadmin/phpmyadmin
 ```
