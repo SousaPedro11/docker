@@ -18,7 +18,7 @@ sudo docker volume create --name phpmyadmin_sessions
 
 ## Rede
 
-Caso necessite, crie uma e conecte o PhapMyadmin e o banco nela.
+Caso necessite, crie uma e conecte o PhpMyadmin e o banco nela.
 Para criar:
 ```sh
 sudo docker network create -d bridge nome_da_rede
@@ -67,7 +67,7 @@ docker run \
 phpmyadmin/phpmyadmin:4.8.5
 ```
 
-### phpMyAdmin integrado com banco_mysql
+### PhpMyAdmin integrado com banco_mysql
 ```sh
 docker run \
 --name phpmyadmin_latest \
