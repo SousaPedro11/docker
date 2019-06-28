@@ -34,7 +34,7 @@ Não precisa
 ### Mysql 5.5
 
 ```sh
-docker run \
+sudo docker run \
 --name mysql_5.5 \
 -p 3306:3306 \
 -v mysql_5.5_config:/etc/mysql/conf.d \
@@ -53,7 +53,7 @@ mysql:5.5
 ### Mysql 5.6
 
 ```sh
-docker run \
+sudo docker run \
 --name mysql_5.6 \
 -p 2001:3306 \
 -v mysql_5.6_data:/var/lib/mysql \
@@ -71,7 +71,7 @@ mysql:5.6
 ### Mysql 5.7
 
 ```sh
-docker run \
+sudo docker run \
 --name mysql_5.7 \
 -p 2002:3306 \
 -v mysql_5.7_config:/etc/mysql/conf.d \
@@ -90,7 +90,7 @@ mysql:5.7
 ### Mysql 8.0.3
 
 ```sh
-docker run \
+sudo docker run \
 --name mysql_8.0.3 \
 -p 3306:3306 \
 -v mysql_8.0.3_config:/etc/mysql/conf.d \
@@ -108,7 +108,7 @@ mysql:8.0.3
 
 ### MySql latest
 ```sh
-docker run \
+sudo docker run \
 --name mysql_latest \
 -p 3306:3306 \
 -v mysql_config:/etc/mysql/conf.d \
