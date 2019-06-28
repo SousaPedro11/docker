@@ -32,7 +32,7 @@ Não precisa
 * Usando Volume Criado
 
 ```sh
-docker create \
+sudo docker create \
 --name=plex \
 --network=host \
 -e VERSION=latest \
@@ -51,7 +51,7 @@ linuxserver/plex
 * Usando Pasta Criada
 
 ```sh
-docker create \
+sudo docker create \
 --name=plex \
 --network=host \
 -e VERSION=latest \
