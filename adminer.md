@@ -12,11 +12,11 @@ Não precisa
 Caso necessite, crie uma e conecte o adminer e o banco nela.
 Para criar:
 ```sh
-sudo docker network create -d bridge <'nome da rede'>
+sudo docker network create -d bridge nome_da_rede
 ```
 Para conectar o container existente (banco ou adminer) em uma rede existente, caso não o faça durante a criação:
 ```sh
-sudo docker network connect <'nome da rede'> <'nome do container'>
+sudo docker network connect nome_da_rede nome_do_container
 ```
 
 ## Criação e execução do container
