@@ -29,7 +29,7 @@ sudo docker network connect nome_da_rede nome_do container
 ### Linux
 
 ```sh
-docker run \
+sudo docker run \
 --name pgadmin_dpage \
 -p 3500:80 \
 -v pgadmin4_home:/root \
