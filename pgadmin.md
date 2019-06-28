@@ -17,11 +17,11 @@ sudo docker volume create --name pgadmin4_lib
 Caso necessite, crie uma e conecte o adminer e o banco nela.
 Para criar:
 ```sh
-sudo docker network create -d bridge <'nome da rede'>
+sudo docker network create -d bridge nome_da_rede
 ```
 Para conectar o container existente (banco ou adminer) em uma rede existente, caso não o faça durante a criação:
 ```sh
-sudo docker network connect <'nome da rede'> <'nome do container'>
+sudo docker network connect nome_da_rede nome_do container
 ```
 
 ## Primeira execução
@@ -54,5 +54,5 @@ docker run \
 -e "PGADMIN_DEFAULT_PASSWORD=senhaqualquer" \
 --restart=unless-stopped \
 -d \
-dpage/pgadmin4:latest
+dpage/pgadmin4
 ```
