@@ -5,9 +5,14 @@
 
 ## Network
 Optional
-### To use:
-- Create with: ```sudo docker network create -d bridge <network name>```
-- Connect after container creation: ```sudo docker network connect <network name> <container name>```
+### Create
+```sh
+sudo docker network create -d bridge <network name>
+```
+### Connect (after container creation)
+```sh
+sudo docker network connect <network name> <container name>
+```
 
 ## Image Build
 ```sh
