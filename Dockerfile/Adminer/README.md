@@ -20,7 +20,7 @@ sudo docker network connect <network name> <container name>
 ## Image Build
 ```sh
 sudo docker build \
--f DOCKERFILE
+-f DOCKERFILE \
 -t adminer:max_upload \
 .
 ```
