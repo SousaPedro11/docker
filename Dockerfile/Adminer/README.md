@@ -40,7 +40,7 @@ adminer:max_upload
 ```sh
 sudo docker run \
 --name adminer \
---net <network name>
+--net <network name> \
 -p 8081:8080 \
 --restart=unless-stopped \
 -d \
