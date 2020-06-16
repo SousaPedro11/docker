@@ -1,7 +1,10 @@
 # Adminer
+
 [Docker Hub](https://hub.docker.com/_/adminer/)
 
 [Adminer](https://www.adminer.org/)
+
+This image allows the import of files with a maximum size of 500mb in the Adminer
 
 ## Network
 Optional
